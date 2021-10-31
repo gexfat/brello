@@ -1,0 +1,3 @@
+[type=date], [type=email], [type=month], [type=number], [type=password], [type=search], [type=text], [type=time], [type=url], [type=week], select, textarea {
+	@apply text-base leading-5
+}

@@ -33,7 +33,7 @@
 			<div class="relative flex items-center justify-between h-14">
 				<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 					<!-- Mobile menu button-->
-					<DisclosureButton class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+					<DisclosureButton class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-black hover:bg-opacity-10 hover:inner-shadow focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 						<span class="sr-only">Open main menu</span>
 						<MenuIcon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
 						<XIcon v-else class="block h-6 w-6" aria-hidden="true" />
@@ -94,8 +94,17 @@
 
 		<DisclosurePanel class="sm:hidden">
 			<div class="px-2 pt-2 pb-3 space-y-1">
-				<a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}
-				</a>
+				<router-link
+				v-for="item in navigation"
+				:key="item.name"
+				:to="item.route"
+				custom
+				v-slot="{ href, navigate, isActive }"
+				>
+					<NavLink :class="[isActive ? 'bg-white bg-opacity-20 text-white' : 'text-white text-opacity-70 hover:text-opacity-100 text-shadow', 'px-3 py-2 rounded text-base font-medium']" :href="href" @click="navigate">
+						{{ item.name }}
+					</NavLink>
+				</router-link>
 			</div>
 		</DisclosurePanel>
 	</Disclosure>

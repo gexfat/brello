@@ -17,7 +17,7 @@
 	[type="week"],
 	select,
 	textarea {
-		@apply text-base leading-5;
+		@apply sm:text-base leading-5;
 	}
 
 	.text-shadow {

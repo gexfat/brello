@@ -93,7 +93,7 @@
 		</div>
 
 		<DisclosurePanel class="sm:hidden">
-			<div class="px-2 pt-2 pb-3 space-y-1">
+			<div class="flex flex-col px-2 pt-2 pb-3 space-y-1">
 				<router-link
 				v-for="item in navigation"
 				:key="item.name"

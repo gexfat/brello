@@ -101,14 +101,14 @@ export default {
 							<div class="mt-4 flex items-center justify-end w-full space-x-2 border-t p-3 bg-gray-50">
 								<button
 									type="button"
-									class="inline-flex justify-center px-4 py-2 text-sm font-medium leading-4 text-gray-600 bg-transparent border border-transparent rounded hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+									class="inline-flex justify-center px-4 py-2 text-sm font-medium leading-4 text-gray-600 bg-transparent border border-transparent rounded hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
 									@click="closeModal"
 								>
 									Cancel
 								</button>
 								<button
 									type="button"
-									class="inline-flex justify-center px-4 py-2 text-sm font-medium leading-4 text-green-900 bg-green-200 border border-transparent rounded hover:bg-green-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+									class="light"
 									@click="closeModal(); submit();"
 								>
 									Save

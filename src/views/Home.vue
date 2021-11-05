@@ -64,7 +64,7 @@ export default {
 
 <template>
 	<div class="2xl:container 2xl:mx-auto">
-		<div class="flex items-center h-16 px-6 bg-white shadow-sm">
+		<div class="flex items-center h-16 px-6 bg-white border-b border-gray-300 border-opacity-50">
 			<!-- Edit board name modal -->
 			<ModalEditName>
 				<template #default="{ openModal }">
@@ -83,7 +83,7 @@ export default {
 			</div>
 		</div>
 	</div>
-	<div class="relative 2xl:container 2xl:mx-auto h-full overflow-x-auto overflow-y-hidden bg-cover bg-center" :style="{ backgroundImage: `url(${boardImage})` }">
+	<div class="relative 2xl:container 2xl:mx-auto h-full overflow-x-auto overflow-y-hidden bg-gray-200 mt-0.5">
 		<!-- Board image -->
 		<div v-show="boardImage" class="fixed w-full h-full bg-white bg-opacity-80"></div>
 		<div class="flex -mt-2 h-full pt-10 p-4">

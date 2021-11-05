@@ -75,12 +75,12 @@
 
 <template>
 	<div>
-		<div class="relative group p-2 border border-gray-200 rounded shadow-xs transition duration-100 cursor-pointer mb-2 break-words" :class="edit ? 'z-50 shadow-lg bg-white border-0' : 'bg-white hover:bg-gray-100 hover:bg-opacity-70 hover:shadow-sm'">
+		<div class="relative group p-2 rounded shadow-sm transition duration-100 cursor-pointer mb-2 break-words" :class="edit ? 'z-50 shadow-lg bg-white border-0' : 'bg-white hover:bg-gray-100 hover:bg-opacity-70'">
 			<div v-show="!edit" class="pr-5">
 				<!-- Task labels -->
 				<div v-if="item.labels.length" class="flex items-center space-x-1 mb-2">
 					<!-- Render the labels array -->
-					<div v-for="(label,index) in item.labels" :key="`label-${index}`" :class="`flex items-center justify-center rounded-full bg-${label.color}-300 border border-${label.color}-400 w-8 h-1.5`">
+					<div v-for="(label,index) in item.labels" :key="`label-${index}`" :class="`flex items-center justify-center rounded-full bg-${label.color}-200 border border-${label.color}-300 w-8 h-1.5`">
 					</div>
 				</div>
 				<!-- Task title -->
@@ -98,11 +98,11 @@
 				<textarea ref="text" rows="4" class="block w-full rounded border border-gray-200 shadow-xs focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" :value="item.text" placeholder="Give your card a title" @keyup.enter="updateItem()" @keydown.enter.exact.prevent/>
 				<div class="flex items-center">
 					<!-- Save button. Updates changes to the store. -->
-					<button class="flex items-center justify-center px-4 py-2 bg-teal-700 hover:bg-teal-500 rounded text-sm text-white leading-4 font-medium transition duration-100 disabled:opacity-50 disabled:cursor-not-allowed" @click="updateItem()" :disabled="!validated">
+					<button class="light" @click="updateItem()" :disabled="!validated">
 						Save
 					</button>
 					<!-- Cancel button. Discards any changes and closes teh form. -->
-					<button class="ml-1 flex items-center w-8 h-8 justify-center bg-transparent hover:bg-gray-200 rounded text-sm text-gray-500 leading-4 font-medium transition duration-100" @click="closeForm()">
+					<button class="ml-1 flex items-center w-8 h-8 justify-center bg-transparent hover:bg-gray-100 rounded text-sm text-gray-500 leading-4 font-medium transition duration-100" @click="closeForm()">
 						<XIcon class="h-5 w-5"/>
 					</button>
 					<!-- More options modal trigger -->

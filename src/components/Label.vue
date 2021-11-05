@@ -25,7 +25,7 @@
 
 <template>
 	<!-- Label component. Accepts styling properties such as color -->
-	<div :class="[labelClass, label.color ? `bg-${label.color}-100 border-${label.color}-200 text-${label.color}-800` : 'bg-teal-200 bg-teal-300 text-teal-700']">
+	<div :class="[labelClass, label.color ? `bg-${label.color}-200 border-${label.color}-300 text-${label.color}-800` : 'bg-teal-200 text-teal-800']">
 		{{ label.text }}
 	</div>
 </template>

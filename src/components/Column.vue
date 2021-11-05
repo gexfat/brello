@@ -108,7 +108,7 @@
 			</div>
 			<!-- Edit button -->
 			<div class="ml-auto">
-				<button class="flex items-center justify-center w-6 h-6 hover:bg-gray-200 text-gray-500 hover:text-gray-700 rounded-sm leading-4 transition duration-100 capitalize" :class="{ 'pointer-events-none':form.visible }" @click="toggleForm();">
+				<button class="flex items-center justify-center w-6 h-6 hover:bg-gray-100 text-gray-500 hover:text-gray-700 rounded-sm leading-4 transition duration-100 capitalize" :class="{ 'pointer-events-none':form.visible }" @click="toggleForm();">
 					<PlusIcon class="h-5 w-5"/>
 				</button>
 			</div>
@@ -122,19 +122,19 @@
 				<template #footer>
 					<div class="mb-2">
 						<div v-show="!form.visible" class="w-full">
-							<button class="group flex items-center justify-start w-full px-2 py-2 bg-transparent hover:bg-gray-200 rounded text-gray-500 hover:text-gray-700 text-sm transition duration-100" @click="toggleForm()">
+							<button class="group flex items-center justify-start w-full px-2 py-2 bg-transparent hover:bg-gray-100 rounded text-gray-500 hover:text-gray-700 text-sm transition duration-100" @click="toggleForm()">
 								<PlusIcon class="h-5 w-5"/>
 								<span class="pl-1">New card</span>
 							</button>
 						</div>
 
 						<div v-show="form.visible" class="space-y-2">
-							<textarea ref="form" rows="4" class="block w-full rounded border border-gray-200 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" v-model="form.text" placeholder="Give your card a title" @keyup.enter="addItem()" @keydown.enter.exact.prevent/>
+							<textarea ref="form" rows="4" class="block w-full rounded border border-gray-200 shadow-xs focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" v-model="form.text" placeholder="Give your card a title" @keyup.enter="addItem()" @keydown.enter.exact.prevent/>
 							<div class="flex items-center space-x-1">
-								<button class="flex items-center justify-center px-4 py-2 bg-teal-700 hover:bg-teal-600 rounded text-sm text-white leading-4 font-medium transition duration-100" @click="addItem()">
+								<button class="light" @click="addItem()">
 									Add card
 								</button>
-								<button class="flex items-center w-8 h-8 justify-center bg-transparent hover:bg-gray-200 rounded text-sm text-gray-500 leading-4 font-medium transition duration-100" @click="toggleForm(); resetForm()">
+								<button class="flex items-center w-8 h-8 justify-center bg-transparent hover:bg-gray-100 rounded text-sm text-gray-500 leading-4 font-medium transition duration-100" @click="toggleForm(); resetForm()">
 									<XIcon class="h-5 w-5"/>
 								</button>
 							</div>

@@ -105,7 +105,7 @@
 	</slot>
 	<TransitionRoot appear :show="isOpen" as="template">
 		<Dialog as="div" static :open="isOpen" @close="closeModal">
-			<div class="fixed inset-0 z-10 overflow-y-auto">
+			<div class="fixed inset-0 z-50 overflow-y-auto">
 				<div class="min-h-screen px-4 text-center">
 					<TransitionChild
 						as="template"
@@ -133,7 +133,7 @@
 						leave-to="opacity-0 scale-95"
 					>
 						<div
-							class="inline-block w-full max-w-4xl my-8 text-left align-middle transition-all transform bg-gray-50 shadow-lg rounded-md"
+							class="relative inline-block w-full max-w-4xl my-8 text-left align-middle transition-all transform bg-gray-50 shadow-lg rounded-md"
 						>
 						<DialogTitle class="div p-4">
 							<h3 class="text-lg font-medium leading-6 text-gray-800">{{ item.text }}</h3>
@@ -146,7 +146,7 @@
 							<div class="md:grid md:grid-cols-3 md:gap-6">
 								<div class="mt-5 md:mt-0 md:col-span-2 space-y-12">
 										<div class="space-y-4">
-											<div class="flex items-center border-b pb-2">
+											<div class="flex items-center border-b border-gray-200 pb-2">
 												<TagIcon class="h-5 w-5 text-gray-500 ml-1 mr-2"/>
 												<h3 class="text-lg font-medium leading-6 text-gray-900">Labels</h3>
 											</div>
@@ -154,7 +154,7 @@
 												<div v-if="item.labels.length"  class="flex items-center space-x-1.5">
 													<div v-for="label in item.labels" :key="label.id" class="relative">
 														<Tag :label-prop="label" style-prop="inline-block pl-2 pr-7 py-2 leading-tight font-medium text-sm border rounded"/>
-														<div class="absolute right-2 top-2.5">
+														<div class="absolute right-2" style="top: 11px;">
 															<input type="checkbox" :id="label.id" :value="label" v-model="item.labels" class="hidden">
 															<label :for="label.id" :class="`text-${label.color}-500 hover:text-${label.color}-600 cursor-pointer`">
 																<XIcon class="h-3.5 w-3.5"/>
@@ -168,7 +168,7 @@
 											</div>
 										</div>
 										<div class="space-y-4">
-											<div class="flex items-center border-b pb-2">
+											<div class="flex items-center border-b border-gray-200 pb-2">
 												<MenuAlt2Icon class="h-5 w-5 text-gray-500 mr-2"/>
 												<h3 class="text-lg font-medium leading-6 text-gray-800">Description</h3>
 												<button class="ml-auto text-sm text-gray-700 hover:underline" @click="editDescription = true">
@@ -185,7 +185,7 @@
 											</div>
 										</div>
 										<!-- <div class="space-y-4">
-											<div class="flex items-center border-b pb-2">
+											<div class="flex items-center border-b border-gray-200 pb-2">
 												<AnnotationIcon class="h-5 w-5 text-gray-500 mr-2"/>
 												<h3 class="text-lg font-medium leading-6 text-gray-800">Comments</h3>
 											</div>
@@ -203,17 +203,17 @@
 							</div>
 						</div>
 
-							<div class="mt-4 flex items-center justify-end w-full space-x-2 border-t p-3 bg-gray-100 rounded-b-md">
+							<div class="mt-4 flex items-center justify-end w-full space-x-2 border-t border-gray-200 p-3 bg-gray-100 rounded-b-md">
 								<button
 									type="button"
-									class="inline-flex justify-center px-4 py-2 text-sm font-medium leading-4 text-gray-600 bg-transparent border border-transparent rounded hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+									class="inline-flex justify-center px-4 py-2 text-sm font-medium leading-4 text-gray-600 bg-transparent border border-transparent rounded hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
 									@click="closeModal();"
 								>
 									Cancel
 								</button>
 								<button
 									type="button"
-									class="inline-flex justify-center px-4 py-2 text-sm font-medium leading-4 text-white bg-teal-700 border border-transparent rounded hover:bg-teal-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+									class="light"
 									@click="submit();"
 								>
 									Save

@@ -72,6 +72,12 @@ const mutations = {
 		console.log(obj)
 
 		console.log(state.lists[obj.list.id].items[index])
+	},
+	ERASE_LIST(state) {
+		console.log('erasing')
+		for(var i = 0; i < state.lists.length; i++){
+			state.lists[i].items = [];
+		}
 	}
 }
 
@@ -89,6 +95,9 @@ const actions = {
 		link.href = window.URL.createObjectURL(blob)
 		link.download = `${rootState.board.board.name}.json`
 		link.click()
+	},
+	eraseList: (context) => {
+		context.commit('ERASE_LIST')
 	}
 }
 

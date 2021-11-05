@@ -15,7 +15,7 @@
       TrashIcon,
     },
     methods: {
-      ...mapActions("list", ["exportList"]),
+      ...mapActions("list", ["exportList", "eraseList"]),
     }
   };
 </script>
@@ -25,7 +25,7 @@
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton
-        class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-600 leading-4 bg-gray-100 hover:bg-gray-200 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-600 leading-4 bg-gray-100 hover:bg-gray-100 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
         Options
         <ChevronDownIcon
@@ -90,6 +90,7 @@
     active ? 'bg-gray-100 text-red-700' : 'text-red-600',
     'group flex rounded items-center w-full px-2 py-2 text-sm',
     ]"
+    @click="eraseList()"
     >
     <TrashIcon
     :active="active"

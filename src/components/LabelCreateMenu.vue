@@ -48,10 +48,10 @@
 	<div class="w-full">
 		<Menu as="div" class="relative w-full">
 			<!-- Add tag button -->
-			<MenuButton class="flex items-center w-full px-4 py-2 text-sm font-medium leading-4 text-gray-800 bg-gray-200 border border-transparent rounded hover:bg-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500">
+			<MenuButton class="flex items-center w-full px-4 py-2 text-sm font-medium leading-4 text-teal-500 bg-gradient-to-t from-gray-100 via-gray-100 to-gray-50 hover:from-gray-100 active:from-gray-200 active:to-gray-200 active:shadow-inner border border-gray-300 border-opacity-50 rounded shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500">
 				<!-- Tag icon -->
-				<TagIcon class="h-4 w-4 mr-2 text-gray-500"/>
-				Add labels
+				<TagIcon class="h-4 w-4 mr-2 text-teal-500"/>
+				<span>Add labels</span>
 			</MenuButton>
 
 			<transition

@@ -60,12 +60,12 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: colors.blueGray,
       indigo: colors.indigo,
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,
-      blue: colors.lightBlue,
+      blue: colors.cyan,
       purple: colors.purple,
       orange: colors.orange,
       teal: colors.teal
@@ -82,19 +82,23 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        xs: '0 1px 2px 0 rgba(0, 0, 0, 0.03)',
+        'xs': '0 1px 2px 0 rgba(0, 0, 0, 0.01)',
+        'sm': '0 1px 3px rgba(26,53,71,.08), 0 0 0 1px rgba(26,53,71,.04), 0 1px 1px rgba(26,53,71,.06)',
+        'inner': '0 1px 0 #fff, inset 0 1px 2px rgba(26, 71, 61, 0.14)'
       }
     },
   },
   variants: {
     extend: {
       animation: ['group-hover'],
+      backgroundColor: ['active'],
       borderWidth: ['last', 'hover'],
-      boxShadow: ['group-hover'],
+      boxShadow: ['active', 'group-hover'],
       cursor: ['disabled'],
       display: ['group-hover'],
-      inset: ['group-hover'],
+      gradientColorStops: ['active', 'group-hover'],
       height: ['hover', 'focus', 'group-hover'],
+      inset: ['group-hover'],
       margin: ['last'],
       opacity: ['hover', 'focus', 'disabled'],
       scale: ['responsive', 'hover', 'focus', 'active', 'group-hover'],

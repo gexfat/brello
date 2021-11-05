@@ -75,9 +75,13 @@
 					description: null,
 					labels: []
 				};
-				this.list.items.push(obj);
+				if (this.form.text === null || this.form.text.match(/^ *$/)) {
+					console.log('empty')
+				} else {
+					this.list.items.push(obj);
+					console.log('added item')
+				}
 				this.resetForm();
-				console.log('added item')
 			},
 			// updateItem(obj) {
 			// 	// console.log('update item method triggered via emit')

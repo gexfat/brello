@@ -62,7 +62,11 @@
 					description: this.item.description,
 					labels: this.item.labels
 				}
-				this.$store.dispatch('list/updateItem', obj)
+				if (this.item.text === null || this.item.text.match(/^ *$/)) {
+					console.log('empty')
+				} else {
+					this.$store.dispatch('list/updateItem', obj)
+				}
 				this.closeForm()
 				//this.itemBeforeEdit = Object.assign({}, obj)
 			},

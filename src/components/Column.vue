@@ -104,7 +104,7 @@
 <template>
 	<div class="relative flex flex-col h-full">
 		<div class="flex items-center flex-shrink-0 h-8 px-4">
-			<div class="text-gray-600 text-uppercase text-xs font-semibold uppercase tracking-wide">
+			<div class="text-shadow-light text-gray-600 text-uppercase text-xs font-semibold uppercase tracking-wide">
 				{{ list.meta.name }}
 				<span class="text-gray-500 text-xs font-normal pl-1">
 					{{ list.items.length || 0 }}

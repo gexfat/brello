@@ -11,6 +11,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+      'Loto',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',

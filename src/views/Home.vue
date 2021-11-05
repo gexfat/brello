@@ -68,9 +68,9 @@ export default {
 			<!-- Edit board name modal -->
 			<ModalEditName>
 				<template #default="{ openModal }">
-					<div class="group flex items-center cursor-pointer" @click="openModal">
+					<div class="truncate group flex items-center cursor-pointer" @click="openModal">
 						<!-- Board name -->
-						<h1 class="text-xl text-gray-800 font-medium">
+						<h1 class="truncate ellipsis text-xl text-gray-800 font-medium">
 							{{ name }}
 						</h1>
 					</div>

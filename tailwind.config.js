@@ -94,7 +94,7 @@ module.exports = {
       animation: ['group-hover'],
       backgroundColor: ['active'],
       borderWidth: ['last', 'hover'],
-      boxShadow: ['active', 'group-hover'],
+      boxShadow: ['focus', 'active', 'group-hover'],
       cursor: ['disabled'],
       display: ['group-hover'],
       gradientColorStops: ['active', 'group-hover'],

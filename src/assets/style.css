@@ -28,6 +28,6 @@
 	}
 
 	button.light {
-		@apply flex items-center justify-center px-4 py-2 bg-gradient-to-t from-gray-100 via-gray-100 to-gray-50 hover:from-gray-100 active:from-gray-200 active:to-gray-200 active:shadow-inner border border-gray-300 border-opacity-50 rounded shadow-xs text-sm text-teal-500 text-shadow-light leading-4 font-medium transition duration-100
+		@apply flex items-center justify-center px-4 py-2 bg-gradient-to-t from-gray-100 via-gray-100 to-gray-50 hover:from-gray-100 active:from-gray-200 active:to-gray-200 active:shadow-inner focus:shadow-inner border border-gray-300 border-opacity-50 rounded shadow-xs text-sm text-teal-500 text-shadow-light leading-4 font-medium transition duration-100
 	}
 }

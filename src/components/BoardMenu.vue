@@ -29,7 +29,7 @@
         >
         <span class="text-gray-900">Options</span>
         <ChevronDownIcon
-        class="w-4 h-4 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
+        class="w-4 h-4 ml-2 -mr-1 text-gray-700 hover:text-gray-900"
         aria-hidden="true"
         />
       </MenuButton>

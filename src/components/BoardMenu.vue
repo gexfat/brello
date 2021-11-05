@@ -25,9 +25,9 @@
     <Menu as="div" class="relative inline-block text-left">
       <div>
         <MenuButton
-        class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-600 leading-4 bg-gray-100 hover:bg-gray-100 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+        class="light"
         >
-        Options
+        <span class="text-gray-900">Options</span>
         <ChevronDownIcon
         class="w-4 h-4 ml-2 -mr-1 text-violet-200 hover:text-violet-100"
         aria-hidden="true"

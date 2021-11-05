@@ -5,7 +5,7 @@
     <p class="font-bold mb-3">
       Road Map
     </p>
-    <ul class="inline-flex flex-col space-y-2 text-base p-2 bg-gray-100 inner-shadow rounded border border-gray-300 border-opacity-50">
+    <ul class="inline-flex flex-col space-y-2 text-base p-2 bg-gray-100 shadow-inner rounded border border-gray-300 border-opacity-50">
       <li>
         Custom labels
       </li>

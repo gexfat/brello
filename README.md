@@ -1,6 +1,14 @@
-# brello
+# brello board
 
-A kanban board that works via browser local storage.
+Brello Board is a lightweight kanbard board that works using local browser storage.
+
+**Road Map:**
+
+- Custom labels
+- Custom backrounds
+- Comments on tasks
+- Import JSON
+- Better support for mobile
 
 ## Project setup
 ```
@@ -16,11 +24,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
